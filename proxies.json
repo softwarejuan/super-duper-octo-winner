@@ -1,0 +1,13 @@
+{
+  "proxyApiUrls": [
+    "https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&proxy_format=protocolipport&format=text",
+    "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/refs/heads/main/socks5_checked.txt",
+    "https://files.ramanode.top/airdrop/grass/server_1.txt",
+    "https://files.ramanode.top/airdrop/grass/server_2.txt",
+    "https://raw.githubusercontent.com/Vauth/proxy/refs/heads/main/proxy.txt",
+    "https://proxyspace.pro/socks5.txt",
+    "https://raw.githubusercontent.com/MyZest/update-live-socks5/refs/heads/master/liveSocks5.txt",
+    "https://raw.githubusercontent.com/elliottophellia/proxylist/refs/heads/master/results/pmix_checked.txt",
+    "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/refs/heads/master/socks5.txt"
+  ]
+}
