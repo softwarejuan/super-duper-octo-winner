@@ -8,10 +8,10 @@ class ProxyChecker {
   constructor() {
     this.config = {
       ipCheckURL: 'https://ipinfo.io/json',
-      timeout: 10000,
-      retryDelay: 1000,
-      maxRetries: 2,
-      maxConcurrent: 100
+      timeout: 5000,
+      retryDelay: 200,
+      maxRetries: 1,
+      maxConcurrent: 400
     };
     this.workingProxies = [];
     this.completedChecks = 0;
