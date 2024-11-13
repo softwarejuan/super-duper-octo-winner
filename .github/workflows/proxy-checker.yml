@@ -8,24 +8,29 @@ on:
 jobs:
   check-proxies:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v3
-    
+      with:
+        fetch-depth: 0  # Ensure full history is fetched to prevent non-fast-forward issues
+
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 'lts/*'
-        
+
     - name: Install dependencies
       run: npm install
-        
+
     - name: Check proxies
       run: |
         node proxy-checker.js
       env:
         OUTPUT_FILE: working_proxies.txt
-        
+
+    - name: Pull latest changes from main
+      run: git pull origin main  # Ensures local branch is up-to-date with remote
+
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
