@@ -7,7 +7,7 @@ class ProxyChecker {
     constructor() {
       this.config = {
         ipCheckURL: 'https://ipinfo.io/json',
-        timeout: 1000,    // Timeout set to 5 seconds
+        timeout: 6000,    // Timeout set to 5 seconds
         maxRetries: 0     // Retry each proxy up to 2 times if it fails initially
       };
       this.workingProxies = new Set();
