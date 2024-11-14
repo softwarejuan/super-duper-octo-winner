@@ -2,7 +2,7 @@ name: Proxy Checker
 
 on:
   schedule:
-    - cron: '*/80 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 jobs:
