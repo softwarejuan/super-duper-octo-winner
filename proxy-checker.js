@@ -7,13 +7,13 @@ class ProxyChecker {
     constructor() {
       this.config = {
         ipCheckURL: 'https://ipinfo.io/json',
-        timeout: 5000,    // Timeout set to 5 seconds
+        timeout: 1000,    // Timeout set to 5 seconds
         maxRetries: 0     // Retry each proxy up to 2 times if it fails initially
       };
       this.workingProxies = new Set();
       this.completedChecks = 0;
       this.totalChecks = 0;
-      this.maxConcurrency = 400; // Limit the number of concurrent proxy checks
+      this.maxConcurrency = 800; // Limit the number of concurrent proxy checks
     }
   
     async checkProxy(proxyUrl, retries = 0) {
