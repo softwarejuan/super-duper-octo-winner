@@ -103,7 +103,8 @@ class QueueBasedProxyChecker {
             // Save working proxies to a text file
             fs.writeFileSync(outputFile, this.workingProxies.join('\n'), 'utf8');
             console.log(`\n\nFound ${this.workingProxies.length} working proxies. Results saved to ${outputFile}`.green);
-        } catch (error) {
+            process.exit(1);
+          } catch (error) {
             console.error(`Error processing proxy list: ${error.message}`.red);
         }
     }
