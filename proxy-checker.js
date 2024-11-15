@@ -123,9 +123,9 @@ async function main() {
         const outputFile = 'working_proxies.txt'; // Output file changed to .txt
         const config = {
             testUrls: ['https://httpbin.org/get', 'https://ipinfo.io/json'],
-            timeout: 5000,
+            timeout: 6000,
             retryAttempts: 1,
-            queueSize: 200,
+            queueSize: 400,
             checkInterval: 100,
         };
 
