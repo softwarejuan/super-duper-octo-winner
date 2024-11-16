@@ -27,7 +27,7 @@ jobs:
 
     - name: Check proxies
       run: |
-        node proxy-checker.js
+        node US-proxy-checker.js
       env:
         OUTPUT_FILE: us_working_proxies.txt
 
