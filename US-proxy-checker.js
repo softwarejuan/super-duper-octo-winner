@@ -21,7 +21,9 @@ class QueueBasedProxyChecker {
     }
 
     getAgent(proxyUrl) {
-        return proxyUrl.startsWith('socks') ? new SocksProxyAgent(proxyUrl) : new HttpsProxyAgent(proxyUrl);
+        return proxyUrl.startsWith('socks') ? new SocksProxyAgent(proxyUrl) : 
+               proxyUrl.startsWith('http') ? new HttpsProxyAgent(proxyUrl) : 
+               new HttpsProxyAgent(`http://${proxyUrl}`);
     }
 
     async testProxy(proxyUrl) {
