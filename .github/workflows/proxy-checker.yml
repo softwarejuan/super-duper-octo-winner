@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: checker-group
-  cancel-in-progress: true
+
 jobs:
   check-proxies:
     runs-on: ubuntu-latest
