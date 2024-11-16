@@ -1,7 +1,5 @@
 {
   "proxyApiUrls": [
-    "https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&proxy_format=protocolipport&format=text",
-    "https://files.ramanode.top/airdrop/grass/server_1.txt",
     "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/refs/heads/main/socks5_checked.txt",
     "https://raw.githubusercontent.com/MyZest/update-live-socks5/refs/heads/master/liveSocks5.txt",
     "https://raw.githubusercontent.com/elliottophellia/proxylist/refs/heads/master/results/pmix_checked.txt",
