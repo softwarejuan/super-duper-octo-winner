@@ -1,0 +1,47 @@
+name: Proxy-Extractor
+
+on:
+  schedule:
+    - cron: "*/30 * * * *" # Runs every 30 minutes
+  workflow_dispatch: # Allows manual run of the workflow
+
+concurrency:
+  group: checker-group
+  cancel-in-progress: true # Prevent overlapping runs
+
+jobs:
+  Proxy-Extractor:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed for committing changes
+      id-token: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 # Ensure full history is fetched
+
+    - name: Pull latest changes from main
+      run: git pull origin main # Pull latest changes before processing
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.x"
+
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip install requests beautifulsoup4 urllib3
+
+    - name: Run main.py
+      run: python3 main.py
+      env:
+        OUTPUT_FILE: proxies.txt
+
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Update proxies.txt"
+        file_pattern: proxies.txt
