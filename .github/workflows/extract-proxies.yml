@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: checker-group
-  cancel-in-progress: true # Prevent overlapping runs
+  # cancel-in-progress: true # Prevent overlapping runs
 
 jobs:
   Proxy-Extractor:
