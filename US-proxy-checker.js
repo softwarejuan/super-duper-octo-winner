@@ -124,7 +124,8 @@ class QueueBasedProxyChecker {
 
 async function main() {
     try {
-        const proxyApiUrls = JSON.parse(fs.readFileSync('proxies.json', 'utf8')).proxyApiUrls;
+        // const proxyApiUrls = JSON.parse(fs.readFileSync('proxies.json', 'utf8')).proxyApiUrls;
+        const proxyApiUrls = ["https://raw.githubusercontent.com/shahid0/super-duper-octo-winner/refs/heads/main/working_proxies.txt"];
         const outputFile = 'us_working_proxies.txt';
         const config = {
             timeout: 6000,
